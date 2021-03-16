@@ -7,7 +7,7 @@ RUN apt update \
  && apt install --no-install-recommends -y bash git ca-certificates make cmake cargo fonts-firacode pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev python3
 
 # Clone repository
-RUN git clone -b master https://github.com/alacritty/alacritty.git /opt/alacritty
+COPY alacritty/ /opt/alacritty/
 # Build alacritty
 RUN cd /opt/alacritty \
  && cargo build --release \

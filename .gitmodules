@@ -1,0 +1,9 @@
+[submodule "neovim-gtk/neovim-gtk"]
+	path = neovim-gtk/neovim-gtk
+	url = https://github.com/daa84/neovim-gtk.git
+[submodule "gnvim/gnvim"]
+	path = gnvim/gnvim
+	url = https://github.com/vhakulinen/gnvim.git
+[submodule "alacritty/alacritty"]
+	path = alacritty/alacritty
+	url = https://github.com/alacritty/alacritty.git
