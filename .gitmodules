@@ -7,3 +7,6 @@
 [submodule "alacritty/alacritty"]
 	path = alacritty/alacritty
 	url = https://github.com/alacritty/alacritty.git
+[submodule "neovide/neovide"]
+	path = neovide/neovide
+	url = https://github.com/Kethku/neovide.git

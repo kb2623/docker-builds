@@ -1,4 +1,4 @@
-FROM debian:bullseye
+FROM debian:bullseye-slim
 
 ENV PATH /usr/local/bin:$PATH
 
@@ -7,7 +7,7 @@ RUN apt update \
  && apt install --no-install-recommends -y bash git ca-certificates make cmake cargo fonts-firacode pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev python3
 
 # Clone repository
-COPY alacritty/ /opt/alacritty/
+ADD alacritty /opt/alacritty
 # Build alacritty
 RUN cd /opt/alacritty \
  && cargo build --release \
