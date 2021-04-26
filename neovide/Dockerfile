@@ -11,7 +11,9 @@ RUN curl -sL "http://packages.lunarg.com/lunarg-signing-key-pub.asc" | apt-key a
  && apt install -y vulkan-sdk
 
 # Install Rust
-RUN curl --proto '=https' --tlsv1.2 -sSf "https://sh.rustup.rs" | sh
+RUN cd /opt \
+ && curl --proto '=https' --tlsv1.2 -sSf "https://sh.rustup.rs" -o rustup-init.sh \
+ && sh rustup-init.sh -y
 
 # Copy repository
 ADD neovide /opt/neovide
